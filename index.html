@@ -22,49 +22,29 @@
     background-size: 48px 48px; pointer-events: none; z-index: 0;
   }
   .wrap { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
-
   nav { border-bottom: 1px solid var(--border); padding: 1.25rem 0; position: sticky; top: 0; background: rgba(9,12,16,0.92); backdrop-filter: blur(12px); z-index: 100; }
   nav .wrap { display: flex; align-items: center; justify-content: space-between; }
   .nav-logo { font-family: var(--mono); font-size: 13px; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; }
   .nav-tag { font-family: var(--mono); font-size: 11px; color: var(--text-muted); letter-spacing: 0.08em; border: 1px solid var(--border); padding: 4px 10px; border-radius: 3px; }
-
   .hero { padding: 5rem 0 4rem; }
-  .hero-eyebrow {
-    font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; color: var(--gold);
-    text-transform: uppercase; margin-bottom: 1rem;
-    display: flex; align-items: center; gap: 10px;
-  }
+  .hero-eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px; }
   .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); flex-shrink: 0; }
-
-  h1 {
-    font-family: var(--display); font-size: clamp(3rem, 6vw, 5.5rem);
-    font-weight: 900; line-height: 1.12; letter-spacing: -0.03em;
-    color: var(--text); margin-bottom: 1.25rem;
-  }
+  h1 { font-family: var(--display); font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 900; line-height: 1.12; letter-spacing: -0.03em; color: var(--text); margin-bottom: 1.25rem; }
   h1 span { color: var(--gold); }
-
-  .hero-sub {
-    font-size: 1.05rem; color: var(--text-mid); max-width: 520px;
-    line-height: 1.75; margin-bottom: 1rem; font-weight: 300; letter-spacing: 0.01em;
-  }
-
+  .hero-sub { font-size: 1.05rem; color: var(--text-mid); max-width: 520px; line-height: 1.75; margin-bottom: 2rem; font-weight: 300; letter-spacing: 0.01em; }
   .hero-stat-row { display: flex; gap: 3rem; border-top: 1px solid var(--border); padding-top: 1.75rem; }
   .stat-num { font-family: var(--display); font-size: 2rem; color: var(--gold); font-weight: 800; display: block; margin-bottom: 0.2rem; letter-spacing: -0.02em; }
   .stat-label { font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; font-family: var(--mono); }
-
   .section-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 12px; }
   .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-
-  .portfolio { padding: 1rem 0 0; }
+  .portfolio { padding: 2.5rem 0 0; }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
-
   .card { background: var(--bg2); padding: 1.5rem; text-decoration: none; display: block; position: relative; overflow: hidden; transition: background 0.2s ease; }
   .card::before { content: ''; position: absolute; inset: 0; background: var(--gold-glow); opacity: 0; transition: opacity 0.2s ease; }
   .card:hover { background: var(--bg3); }
   .card:hover::before { opacity: 1; }
   .card:hover .card-arrow { transform: translate(3px, -3px); color: var(--gold); }
   .card:hover .card-tag { border-color: rgba(201,168,76,0.3); color: var(--gold); }
-
   .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
   .card-index { font-family: var(--mono); font-size: 10px; color: var(--text-muted); letter-spacing: 0.1em; }
   .card-arrow { font-size: 14px; color: var(--text-muted); transition: transform 0.2s ease, color 0.2s ease; }
@@ -76,14 +56,12 @@
   .card-status { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; margin-left: auto; }
   .status-live { color: #4ade80; }
   .status-soon { color: var(--text-muted); }
-
   footer { border-top: 1px solid var(--border); margin-top: 4rem; padding: 1.75rem 0; position: relative; z-index: 1; }
   footer .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
   .footer-copy { font-family: var(--mono); font-size: 11px; color: var(--text-muted); }
   .footer-copy span { color: var(--gold); }
-
   @media (max-width: 600px) {
-    .hero { padding: 2rem 0 2rem; }
+    .hero { padding: 3.5rem 0 3rem; }
     .hero-stat-row { gap: 1.5rem; }
     .grid { grid-template-columns: 1fr; }
   }
@@ -96,38 +74,35 @@
     <div class="nav-tag">Portfolio</div>
   </div>
 </nav>
-
 <section class="hero">
   <div class="wrap">
     <div class="hero-eyebrow">Deoyin & Company LLC</div>
     <h1>Built for<br />the <span>regulated</span><br />frontier.</h1>
     <p class="hero-sub">A portfolio of specialized platforms spanning life sciences, pharmacometrics, real estate intelligence, and operational automation.</p>
     <div class="hero-stat-row">
-      <div class="stat-item"><span class="stat-num">7</span><span class="stat-label">Ventures</span></div>
-      <div class="stat-item"><span class="stat-num">2</span><span class="stat-label">Live</span></div>
+      <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Ventures</span></div>
+      <div class="stat-item"><span class="stat-num">3</span><span class="stat-label">Live</span></div>
       <div class="stat-item"><span class="stat-num">&#8734;</span><span class="stat-label">In Build</span></div>
     </div>
   </div>
 </section>
-
 <section class="portfolio">
   <div class="wrap">
     <div class="section-label">Portfolio</div>
     <div class="grid" id="grid"></div>
   </div>
 </section>
-
 <footer>
   <div class="wrap">
     <div class="footer-copy">© 2026 <span>Deoyin & Company LLC</span>. All rights reserved.</div>
     <div class="footer-copy">deoyin.com</div>
   </div>
 </footer>
-
 <script>
 const ventures = [
   { sub: "px.deoyin.com", title: "Deoyin PX", desc: "Clinical analytics platform for PK/PD, CDISC programming, HEOR/ICER modeling, and reporting automation for pharma and biotech teams.", tags: ["PK/PD", "CDISC", "HEOR"], status: "live", url: "https://px.deoyin.com" },
   { sub: "realty.deoyin.com", title: "Deoyin Realty", desc: "Real estate intelligence and investment analytics platform built for data-driven property evaluation and portfolio strategy.", tags: ["Real Estate", "Analytics", "Invest"], status: "live", url: "https://realty.deoyin.com" },
+  { sub: "rexilade.deoyin.com", title: "Rexilade Chemist", desc: "A modern digital pharmacy and chemist platform delivering medication information, prescription guidance, and clinical drug resources.", tags: ["Pharmacy", "Chemist", "Rx"], status: "live", url: "https://rexilade.deoyin.com" },
   { sub: "studios.deoyin.com", title: "Deoyin Studios", desc: "Creative and technical production arm for design, branding, and digital product development within the Deoyin ecosystem.", tags: ["Design", "Branding", "Build"], status: "soon", url: "https://studios.deoyin.com" },
   { sub: "rxswap.deoyin.com", title: "RxSwap", desc: "Intelligent drug substitution and formulary optimization platform for pharmacists, payers, and clinical decision support teams.", tags: ["Pharmacy", "Formulary", "AI"], status: "soon", url: "https://rxswap.deoyin.com" },
   { sub: "grind.deoyin.com", title: "Deoyin Grind", desc: "Development studio and engineering factory for companies and institutions that need websites, web apps, and custom digital products built to spec.", tags: ["Dev Studio", "Web Apps", "Build"], status: "soon", url: "https://grind.deoyin.com" },
