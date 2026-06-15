@@ -80,7 +80,7 @@
     <h1>Built for<br />the <span>regulated</span><br />frontier.</h1>
     <p class="hero-sub">A portfolio of specialized platforms spanning life sciences, pharmacometrics, real estate intelligence, and operational automation.</p>
     <div class="hero-stat-row">
-      <div class="stat-item"><span class="stat-num">11</span><span class="stat-label">Ventures</span></div>
+      <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Ventures</span></div>
       <div class="stat-item"><span class="stat-num">6</span><span class="stat-label">Live</span></div>
       <div class="stat-item"><span class="stat-num">&#8734;</span><span class="stat-label">In Build</span></div>
     </div>
@@ -100,17 +100,14 @@
 </footer>
 <script>
 const ventures = [
-  {sub: "heor.deoyin.com", title: "DeoHEOR", desc: "Graph-based health economic modelling platform with DAG-driven CEA/BIA workflows, integrated DSA/PSA/CEAC, Markov cohort support, and sign-and-lock audit trails for HTA submission defense.", tags: ["HEOR", "CEA", "HTA"], status: "live", url: "https://heor.deoyin.com"},
+  { sub: "heor.deoyin.com", title: "DeoHEOR", desc: "Graph-based health economic modelling platform with DAG-driven CEA/BIA workflows, integrated DSA/PSA/CEAC, Markov cohort support, and sign-and-lock audit trails for HTA submission defense.", tags: ["HEOR", "CEA", "HTA"], status: "live", url: "https://heor.deoyin.com"},
+  { sub: "radar.deoyin.com", title: "DeoRadar", desc: "AI-powered regulatory intelligence platform monitoring FDA, EMA, EU MDR, MHRA, ICH, and 15+ global authorities — with impact-scored alerts, change management workflows, and audit-ready compliance logs for regulated industries.", tags: ["Regulatory Intelligence", "RA/QA", "Compliance"], status: "live", url: "https://radar.deoyin.com"},
   { sub: "signal.deoyin.com", title: "DeoSignal", desc: "ML-powered post-market surveillance and signal detection platform built on end-to-end Python/R pipelines, targeting pharma and medical device companies.", tags: ["PMS", "Signal Detection", "ML"], status: "live", url: "https://signal.deoyin.com" },
   { sub: "pam.deoyin.com", title: "Deoyin PAM", desc: "Real-time manufacturing process anomaly detection dashboard built on industry-grade statistical and ML models, designed for production-ready signal monitoring in regulated biotech environments.", tags: ["mRNA", "Anomaly Detection", "Biotech"], status: "live", url: "https://pam.deoyin.com" },
   { sub: "px.deoyin.com", title: "Deoyin PX", desc: "Clinical analytics platform for PK/PD, CDISC programming, HEOR/ICER modeling, and reporting automation for pharma and biotech teams.", tags: ["PK/PD", "CDISC", "HEOR"], status: "live", url: "https://px.deoyin.com" },
-  { sub: "realty.deoyin.com", title: "Deoyin Realty", desc: "Real estate intelligence and investment analytics platform built for data-driven property evaluation and portfolio strategy.", tags: ["Real Estate", "Analytics", "Invest"], status: "live", url: "https://realty.deoyin.com" },
   { sub: "rexilade.deoyin.com", title: "Rexilade Chemist", desc: "A modern digital pharmacy and chemist platform delivering medication information, prescription guidance, and clinical drug resources.", tags: ["Pharmacy", "Chemist", "Rx"], status: "live", url: "https://rexilade.deoyin.com" },
-  { sub: "studios.deoyin.com", title: "Deoyin Studios", desc: "Creative and technical production arm for design, branding, and digital product development within the Deoyin ecosystem.", tags: ["Design", "Branding", "Build"], status: "soon", url: "https://studios.deoyin.com" },
   { sub: "rxswap.deoyin.com", title: "RxSwap", desc: "Intelligent drug substitution and formulary optimization platform for pharmacists, payers, and clinical decision support teams.", tags: ["Pharmacy", "Formulary", "AI"], status: "soon", url: "https://rxswap.deoyin.com" },
-  { sub: "grind.deoyin.com", title: "Deoyin Grind", desc: "Development studio and engineering factory for companies and institutions that need websites, web apps, and custom digital products built to spec.", tags: ["Dev Studio", "Web Apps", "Build"], status: "soon", url: "https://grind.deoyin.com" },
-  { sub: "neuropharma.deoyin.com", title: "NeuroPharma", desc: "A pharmacology and neuroscience publication covering the latest field developments, drug research, and expert advisory perspectives from a clinical and quantitative lens.", tags: ["Blog", "Pharmacology", "Neuroscience"], status: "soon", url: "https://neuropharma.deoyin.com" },
-  { sub: "recruit.deoyin.com", title: "Deoyin Recruit", desc: "Specialized life sciences talent and staffing intelligence platform connecting regulated-industry expertise with high-growth organizations.", tags: ["Talent", "Life Sciences", "HR"], status: "soon", url: "https://recruit.deoyin.com" }
+  { sub: "neuropharma.deoyin.com", title: "NeuroPharma", desc: "A pharmacology and neuroscience publication covering the latest field developments, drug research, and expert advisory perspectives from a clinical and quantitative lens.", tags: ["Blog", "Pharmacology", "Neuroscience"], status: "soon", url: "https://neuropharma.deoyin.com" }
 ];
 const grid = document.getElementById('grid');
 ventures.forEach((v, i) => {
