@@ -33,6 +33,7 @@
 }
 
 html { scroll-behavior: smooth; }
+section[id], .content-card[id] { scroll-margin-top: 90px; }
 
 body {
   background: var(--bg);
