@@ -3,82 +3,49 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Deoyin & Company</title>
+<title>Deoyin & Company | Built for the Regulated Frontier</title>
+<meta name="description" content="Deoyin & Company builds specialized software platforms for life sciences, quality systems, and regulated operations, from HEOR modelling to regulatory intelligence to post-market surveillance." />
+<link rel="canonical" href="https://deoyin.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Deoyin & Company | Built for the Regulated Frontier" />
+<meta property="og:description" content="A portfolio of specialized platforms spanning life sciences, quality systems, and operational automation." />
+<meta property="og:url" content="https://deoyin.com/" />
+<meta property="og:image" content="https://deoyin.com/assets/img/favicon.svg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Deoyin & Company | Built for the Regulated Frontier" />
+<meta name="twitter:description" content="A portfolio of specialized platforms spanning life sciences, quality systems, and operational automation." />
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+<link rel="manifest" href="site.webmanifest" />
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Urbanist:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --bg: #090c10; --bg2: #0e1218; --bg3: #141920;
-    --border: rgba(255,255,255,0.07);
-    --gold: #c9a84c; --gold-glow: rgba(201,168,76,0.08);
-    --text: #e8eaf0; --text-muted: #6b7280; --text-mid: #9ca3af;
-    --mono: 'Space Mono', monospace;
-    --display: 'Urbanist', sans-serif;
-  }
-  body { background: var(--bg); color: var(--text); font-family: var(--display); min-height: 100vh; overflow-x: hidden; }
-  body::before {
-    content: ''; position: fixed; inset: 0;
-    background-image: linear-gradient(rgba(201,168,76,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(201,168,76,0.015) 1px, transparent 1px);
-    background-size: 48px 48px; pointer-events: none; z-index: 0;
-  }
-  .wrap { position: relative; z-index: 1; max-width: 1080px; margin: 0 auto; padding: 0 2rem; }
-  nav { border-bottom: 1px solid var(--border); padding: 1.25rem 0; position: sticky; top: 0; background: rgba(9,12,16,0.92); backdrop-filter: blur(12px); z-index: 100; }
-  nav .wrap { display: flex; align-items: center; justify-content: space-between; }
-  .nav-logo { font-family: var(--mono); font-size: 13px; color: var(--gold); letter-spacing: 0.12em; text-transform: uppercase; }
-  .nav-tag { font-family: var(--mono); font-size: 11px; color: var(--text-muted); letter-spacing: 0.08em; border: 1px solid var(--border); padding: 4px 10px; border-radius: 3px; }
-  .hero { padding: 5rem 0 4rem; }
-  .hero-eyebrow { font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px; }
-  .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); flex-shrink: 0; }
-  h1 { font-family: var(--display); font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 900; line-height: 1.12; letter-spacing: -0.03em; color: var(--text); margin-bottom: 1.25rem; }
-  h1 span { color: var(--gold); }
-  .hero-sub { font-size: 1.05rem; color: var(--text-mid); max-width: 520px; line-height: 1.75; margin-bottom: 2rem; font-weight: 300; letter-spacing: 0.01em; }
-  .hero-stat-row { display: flex; gap: 3rem; border-top: 1px solid var(--border); padding-top: 1.75rem; }
-  .stat-num { font-family: var(--display); font-size: 2rem; color: var(--gold); font-weight: 800; display: block; margin-bottom: 0.2rem; letter-spacing: -0.02em; }
-  .stat-label { font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; font-family: var(--mono); }
-  .section-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 12px; }
-  .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-  .portfolio { padding: 2.5rem 0 0; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
-  .card { background: var(--bg2); padding: 1.5rem; text-decoration: none; display: block; position: relative; overflow: hidden; transition: background 0.2s ease; }
-  .card::before { content: ''; position: absolute; inset: 0; background: var(--gold-glow); opacity: 0; transition: opacity 0.2s ease; }
-  .card:hover { background: var(--bg3); }
-  .card:hover::before { opacity: 1; }
-  .card:hover .card-arrow { transform: translate(3px, -3px); color: var(--gold); }
-  .card:hover .card-tag { border-color: rgba(201,168,76,0.3); color: var(--gold); }
-  .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
-  .card-index { font-family: var(--mono); font-size: 10px; color: var(--text-muted); letter-spacing: 0.1em; }
-  .card-arrow { font-size: 14px; color: var(--text-muted); transition: transform 0.2s ease, color 0.2s ease; }
-  .card-name { font-family: var(--mono); font-size: 10px; color: var(--gold); letter-spacing: 0.12em; text-transform: lowercase; margin-bottom: 0.4rem; }
-  .card-title { font-family: var(--display); font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; line-height: 1.2; letter-spacing: -0.01em; }
-  .card-desc { font-size: 0.83rem; color: var(--text-mid); line-height: 1.6; font-weight: 300; }
-  .card-footer { margin-top: 1.2rem; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
-  .card-tag { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); border: 1px solid var(--border); padding: 3px 7px; border-radius: 2px; transition: all 0.2s ease; }
-  .card-status { font-family: var(--mono); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; margin-left: auto; }
-  .status-live { color: #4ade80; }
-  .status-soon { color: var(--text-muted); }
-  footer { border-top: 1px solid var(--border); margin-top: 4rem; padding: 1.75rem 0; position: relative; z-index: 1; }
-  footer .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-  .footer-copy { font-family: var(--mono); font-size: 11px; color: var(--text-muted); }
-  .footer-copy span { color: var(--gold); }
-  @media (max-width: 600px) {
-    .hero { padding: 3.5rem 0 3rem; }
-    .hero-stat-row { gap: 1.5rem; }
-    .grid { grid-template-columns: 1fr; }
-  }
-</style>
+<link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
-<nav>
+<nav class="site-nav">
   <div class="wrap">
-    <div class="nav-logo">Deoyin & Company</div>
-    <div class="nav-tag">Portfolio</div>
+    <a href="index.html" class="nav-logo">Deoyin & Company</a>
+    <ul class="nav-links" data-nav-links>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="index.html#portfolio">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" data-theme-toggle type="button"></button>
+      <button class="nav-burger" data-nav-burger type="button" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
   </div>
 </nav>
+
 <section class="hero">
   <div class="wrap">
     <div class="hero-eyebrow">Deoyin & Company LLC</div>
     <h1>Built for<br />the <span>regulated</span><br />frontier.</h1>
     <p class="hero-sub">A portfolio of specialized platforms spanning life sciences, quality systems, and operational automation.</p>
+    <div class="hero-actions">
+      <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+      <a href="contact.html" class="btn btn-ghost">Get in Touch</a>
+    </div>
     <div class="hero-stat-row">
       <div class="stat-item"><span class="stat-num">7</span><span class="stat-label">Ventures</span></div>
       <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">Live</span></div>
@@ -86,24 +53,77 @@
     </div>
   </div>
 </section>
-<section class="portfolio">
+
+<section class="page-section reveal" id="portfolio">
   <div class="wrap">
     <div class="section-label">Portfolio</div>
+    <p class="section-intro">Each venture is purpose-built for a specific pain point in regulated industries, from HTA submission defense to real-time manufacturing anomaly detection.</p>
     <div class="grid" id="grid"></div>
   </div>
 </section>
-<footer>
+
+<section class="page-section reveal">
   <div class="wrap">
-    <div class="footer-copy">© 2026 <span>Deoyin & Company LLC</span>. All rights reserved.</div>
-    <div class="footer-copy">deoyin.com</div>
+    <div class="section-label">Approach</div>
+    <h2 class="section-heading">One studio, seven platforms.</h2>
+    <p class="section-intro">We design and ship compliance-first software for pharma, medtech, and biotech teams who can't afford to get the details wrong. <a href="services.html" style="color: var(--gold); text-decoration: none;">See how we build &rarr;</a></p>
+    <div class="content-grid">
+      <div class="content-card">
+        <span class="content-card-num">01</span>
+        <h3>Regulated by default</h3>
+        <p>Audit trails, sign-and-lock workflows, and 21 CFR Part 11 patterns are built in from day one, not bolted on later.</p>
+      </div>
+      <div class="content-card">
+        <span class="content-card-num">02</span>
+        <h3>Domain-first design</h3>
+        <p>Every platform is shaped around how HEOR analysts, RA/QA teams, and lab operators actually work.</p>
+      </div>
+      <div class="content-card">
+        <span class="content-card-num">03</span>
+        <h3>Built to last</h3>
+        <p>Small, focused tools that stay maintainable: no unnecessary complexity, no throwaway prototypes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Deoyin & Company</h4>
+        <p>Built for the regulated frontier. A portfolio of specialized platforms spanning life sciences, quality systems, and operational automation.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Site</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© <span data-year>2026</span> <span>Deoyin & Company LLC</span>. All rights reserved.</div>
+      <div class="footer-copy">deoyin.com</div>
+    </div>
   </div>
 </footer>
+
 <script>
 const ventures = [
   { sub: "heor.deoyin.com", title: "DeoHEOR", desc: "Graph-based health economic modelling platform with DAG-driven CEA/BIA workflows, integrated DSA/PSA/CEAC, Markov cohort support, and sign-and-lock audit trails for HTA submission defense.", tags: ["HEOR", "CEA", "HTA"], status: "live", url: "https://heor.deoyin.com"},
   { sub: "radar.deoyin.com", title: "DeoRadar", desc: "AI-powered regulatory intelligence platform monitoring FDA, EMA, EU MDR, MHRA, ICH, and 15+ global authorities with impact-scored alerts, change management workflows, and audit-ready compliance logs for regulated industries.", tags: ["Regulatory Intelligence", "RA/QA", "Compliance"], status: "live", url: "https://radar.deoyin.com"},
   { sub: "signal.deoyin.com", title: "DeoSignal", desc: "ML-powered post-market surveillance and signal detection platform built on end-to-end Python/R pipelines, targeting pharma and medical device companies.", tags: ["PMS", "Signal Detection", "ML"], status: "live", url: "https://signal.deoyin.com" },
-  { sub: "lab.deoyin.com", "title": "DeoBench", "desc": "Compliance-first lab infrastructure SaaS — calibration tracking, 21 CFR Part 11 audit trails, and reagent burn-rate forecasting for CROs and biotech startups.", "tags": ["Lab Operations", "Forecasting", "Compliance"], "status": "live", "url": "https://lab.deoyin.com" },
+  { sub: "lab.deoyin.com", "title": "DeoBench", "desc": "Compliance-first lab infrastructure SaaS: calibration tracking, 21 CFR Part 11 audit trails, and reagent burn-rate forecasting for CROs and biotech startups.", "tags": ["Lab Operations", "Forecasting", "Compliance"], "status": "live", "url": "https://lab.deoyin.com" },
   { sub: "pam.deoyin.com", title: "Deoyin PAM", desc: "Real-time manufacturing process anomaly detection dashboard built on industry-grade statistical and ML models, designed for production-ready signal monitoring in regulated biotech environments.", tags: ["mRNA", "Anomaly Detection", "Biotech"], status: "live", url: "https://pam.deoyin.com" },
   { sub: "rxswap.deoyin.com", title: "RxSwap", desc: "Intelligent drug substitution and formulary optimization platform for pharmacists, payers, and clinical decision support teams.", tags: ["Pharmacy", "Formulary", "AI"], status: "soon", url: "https://rxswap.deoyin.com" },
   { sub: "neuropharma.deoyin.com", title: "NeuroPharma", desc: "A pharmacology and neuroscience publication covering the latest field developments, drug research, and expert advisory perspectives from a clinical and quantitative lens.", tags: ["Blog", "Pharmacology", "Neuroscience"], status: "soon", url: "https://neuropharma.deoyin.com" }
@@ -126,5 +146,6 @@ ventures.forEach((v, i) => {
   grid.appendChild(a);
 });
 </script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

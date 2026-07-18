@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://deoyin.com/sitemap.xml
