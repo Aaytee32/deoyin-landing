@@ -21,12 +21,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# Two jobs, not one: deploy-pages can't always see an artifact uploaded earlier in
+# the same job, which fails with "No artifacts named github-pages were found".
 jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  package:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,6 +36,14 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
+
+  deploy:
+    needs: package
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
